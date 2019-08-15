@@ -1,0 +1,31 @@
+<ion-header style="height: 250px;background-color:lightsalmon">
+  <!-- <ion-toolbar> -->
+  <ion-buttons slot="start">
+    <ion-menu-button>
+    </ion-menu-button>
+    <ion-icon name="md-more" style="margin-left:280px;font-size: 40px" (click)="popover($event)"></ion-icon>
+  </ion-buttons>
+  <br><br><br><br><br><br>
+  <h4>
+    <ion-label style="margin-left: 30px">My Day</ion-label>
+  </h4>
+  <h4>
+    <ion-label style="margin-left: 30px">{{today | date}}</ion-label>
+  </h4>
+
+</ion-header>
+
+<ion-content>
+  &nbsp; &nbsp; &nbsp;
+  <h3 style="margin-left:35px;font-family:cursive">Sorting of tasks alphabetically</h3>
+  <br>
+  <ion-card class="card">
+  <ion-item color="transparent" style="font-size:25px;font-family:cursive" *ngFor="let x of unique">
+    {{x.task}}
+   
+  </ion-item>
+</ion-card>
+
+  <br>
+
+</ion-content>

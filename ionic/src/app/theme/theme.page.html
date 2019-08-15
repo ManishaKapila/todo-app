@@ -1,0 +1,23 @@
+<ion-header style="height: 250px">
+  <!-- <ion-toolbar> -->
+      <ion-buttons slot="start">
+          <ion-menu-button>
+          </ion-menu-button>
+          <ion-icon name="md-more" style="margin-left: 300px;font-size: 40px" (click)="popover($event)"></ion-icon>
+        </ion-buttons>
+        <br><br><br><br><br><br><h4> <ion-label style="margin-left: 30px">My Day</ion-label></h4>
+        <h4><ion-label style="margin-left: 30px">{{today | date}}</ion-label></h4>
+
+</ion-header>
+
+<ion-content>
+  <br><br>
+    <ion-button expand="round" style="width:150px;height: 55px;font-family:cursive" color="medium" (click)="changeTheme('autumn')">Peach</ion-button><br><br>
+    <ion-button expand="round" style="width:150px;height: 55px;font-family:cursive" color="medium" (click)="changeTheme('night')">Dark</ion-button><br><br>
+    <ion-button expand="round" style="width:150px;height: 55px;font-family:cursive" color="medium" (click)="changeTheme('neon')">Violet</ion-button><br><br>
+    <ion-button expand="round" style="width:150px;height:55px;font-family:cursive" color="medium" (click)="changeTheme('')">default</ion-button>
+    <hr>
+
+&nbsp; &nbsp; &nbsp;
+
+</ion-content>

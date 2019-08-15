@@ -1,0 +1,55 @@
+<ion-header style="height: 100px;background-color:lightsalmon">
+
+    <ion-buttons slot="end"><br>
+    
+        <ion-icon name ="arrow-round-back" routerLink="/welcome" style="font-size:30px;margin-top: 30px"></ion-icon>
+  
+    <ion-title>
+      <h4 style="text-align:center;margin-top:30px;font-size: 30px">Add Account</h4>
+    </ion-title>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+
+<br> <br> &nbsp;
+  &nbsp;
+  <br><br>
+  
+    <ion-content style="text-align:left">
+      
+      <ion-card  style="border: 8px solid color;border-radius: 10px;margin-top: 0px">
+        
+        <ion-card-content>
+          <!-- <ion-item>
+            <ion-label position="floating"><strong>Name</strong> </ion-label>
+            <ion-input type="text"  [(ngModel)]="name"></ion-input>
+          </ion-item><br> -->
+         
+      
+          <form [formGroup]="formdata" (ngSubmit)="onSubmit(formdata.value)">
+            <ion-item color="transparent" class="ion-padding-top">
+              <ion-label position="stacked" style="font-size: x-large"><strong> Contact Number</strong></ion-label>
+            <ion-input  formControlName="contact" style="font-size: larger"></ion-input>
+            </ion-item>
+      
+        <div>
+          <ng-container  *ngFor="let validation of validation_messages.contact" >
+            <div class="error-message" *ngIf="formdata.get('contact').hasError(validation.type)
+            && (formdata.get('contact').dirty || formdata.get('contact').touched)">
+            <p style="color:black;font-size: 18px">{{validation.message}}</p>
+          </div>
+        </ng-container>
+        </div>
+    <br><br>
+  
+  <ion-button type="submit" [disabled]="!formdata.valid" expand="block" style="height:55px">Next<ion-icon name ="arrow-round-forward" style="font-size:30px"> </ion-icon></ion-button>
+  <br><br>
+  <ion-button routerLink="/list" (click)="onSubmit()" expand="block" style="height:55px">Sign up<ion-icon name ="arrow-round-forward" style="font-size:30px"> </ion-icon></ion-button>
+  <!-- <div style="background-image:url('/assets/b11.jpg');width:100%;height:100%;background-repeat:no-repeat;margin-top: 80px;margin-left: 60px">
+</div> -->
+  </form>
+    </ion-card-content>
+</ion-card>
+
+</ion-content>

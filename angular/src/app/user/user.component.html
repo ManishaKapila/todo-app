@@ -1,0 +1,25 @@
+<h1 style="margin-left: 600px">User Details</h1>
+<div>
+  <table style="margin-left: 400px">
+
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Actions </th> 
+  </tr>
+    <tr *ngFor="let x of users">
+      <th scope="row">{{x.name}}</th>
+      <th>{{x.contact}}</th>
+  
+      <td><button type="button">
+    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+      </button>
+  <button type="button">
+    <span class="glyphicon glyphicon-edit" aria-hidden="true" routerLink="/update/ {{x.contact}} "routerLinkActive="active"></span>
+  </button>
+  
+  </td>
+ </tr>
+</table>
+</div>
+<a routerLink="/user" routerLinkActive="active"></a>

@@ -1,0 +1,23 @@
+<ion-header>
+<ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    Reminder
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-item  color="transparent" style="font-size:25px" *ngFor="let x of unique1">
+          {{x.title}}
+        </ion-item>
+        </ion-card>
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button>
+              <ion-icon name="add" routerLink="/addreminder"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+<!-- <div style="background-image:url('/assets/b2.jpg');width:100%;height:30%;background-repeat:no-repeat;background-size: cover">
+</div> -->
+</ion-content>
